@@ -1,0 +1,42 @@
+<head>
+    <title>Music Source Separator Web</title>
+    <style type="text/css">
+        body {
+        font-family: arial;
+        background-color: rgb(185,179,175);}
+        title {
+        color: rgb(255,255,255);}
+    </style>
+</head>
+
+<body>
+    <h1>
+        A WebApp to perform Music Source Separation
+    </h1>
+    <p>
+        Some Information
+    </p>
+    <a href="C:\Users\TA1DA\Documents\Demo\">Select a file</a>
+
+    <form method = 'POST' class="col s12" enctype="multipart/form-data">
+  
+        {% csrf_token %}
+  
+        {{new_form.as_p}}
+  
+    <!--Below is our main file upload input -->
+        <input type = "audio" name = 'music'>
+        <p><button type = "submit" class = "waves-effect waves-light btn" style = "background-color: teal">Separate</button></p>
+    </form>
+    
+    <audio controls>
+        <source src="audio-tag-sample.wav" type="audio/wav">
+        Audio file type unsupported.
+    </audio>
+
+    <p>
+        Your file has been loaded!
+    </p>
+
+    
+</body>
