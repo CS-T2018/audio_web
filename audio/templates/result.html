@@ -1,22 +1,29 @@
-<!DOCTYPE html>
-<h1 style="font-family:monospace; align-items: center; background-color:cadetblue;border-bottom: 5px;">
-    Separation results!
-</h1>
-<body style="background-color:darkkhaki;">
-    <table class="table-bordered" id="latest" style="border: 3px; border-style: dotted;">
-        <thead class="thead-dark" style="align-self: center; background-color: tomato; font-family: Helvetica;">
-            <tr>
-                <th>Stem Name</th>
-                <th>Model</th>
-                <th>Separated Audio</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</body>
+<!doctype html>
+<html style="background-image: url('{{ song.song_file.url }}/static/images/backg4.png'); background-position:center;" class='png'>
+<head>
+
+<title>(Results) Demo of separation tracks on music and vocal parts</title>
+</head>
+<body>
+<div class="maingif2mp4">
+
+	<h1 style="background-color: aquamarine; text-align: center; color: crimson;">Music Source Separation WebApp based on OpenUnmix</h1>
+	<div class="table-responsive" style="margin-top: 30px; border: 1px solid #CCCCCC; border-radius: 5px; padding-top: 10px; align-content: center;" id="latest_block">
+	<table class="table table-bordered" id="latest" style="border: 5px; border-color: black; border-style: ridge; align-self:baseline; background-color:darkorange">
+	<thead class="thead-dark" style="align-self: center;background-color: darkcyan; color: black; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+	<tr>
+		<th>Stem</th>
+		<th>Audio</th>
+	</tr>
+	</thead>
+	<tbody>
+<tr><td><span title='Vocals'><strong>Vocals</strong><BR>
+	</span></td><td><audio src="{{ song.song_file.url }}/media/output/vocals.wav" controls></audio></td></tr><tr><td><span title='Bass'><strong>Bass</strong><BR>
+	</span></td><td><audio src="{{ song.song_file.url }}/media/output/bass.wav" controls></audio></td></tr><tr><td><span title='Drums'><strong>Drums</strong><BR>
+	</span></td><td><audio src="{{ song.song_file.url }}/media/output/drums.wav" controls></audio></td></tr><tr><td><span title='Other'><strong>Other</strong><BR>
+	</span></td><td><audio src="{{ song.song_file.url }}/media/output/other.wav" controls></audio></td></tr>	</tbody>
+	</table>
+	</div>	 
+	<a href="{% url 'home' %}" style="align-self: center;">Return Home</a>
+		</body>
+</html>

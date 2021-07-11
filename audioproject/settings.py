@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-11r9qvv1cg3hke6+et5a3t=3_^0tjm2minb46))4lkz=am!dqh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['202.195.167.244','127.0.0.1']
 
 
 # Application definition
@@ -64,6 +64,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -126,7 +127,7 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
-MEDIA_URL = '/media/documents/' # new
+MEDIA_URL = '/media/' # new
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # new
 
 

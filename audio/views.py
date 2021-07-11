@@ -3,14 +3,15 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.core.files.storage import FileSystemStorage
 from .forms import AudioForm
-from django.urls import reverse
 from django.http import HttpResponse, request
-from .OpenUnmix import demo_gao_s2s
-
+import subprocess
 
 # Create your views here.
 class HomePageView(TemplateView):
     template_name = 'home.html'
+
+class AboutView(TemplateView):
+    template_name = 'about.html'
 
 def Audio_store(request):
     if request.method == 'POST': 
@@ -22,9 +23,10 @@ def Audio_store(request):
         form = AudioForm() 
     return render(request, 'home.html', {'form' : form})
 
-def Separate(request):
-    if request.method == 'POST' and 'run_script' in request.POST:  
-        # call function
-        demo_gao_s2s()
-        # return user to required page
-        return HttpResponseRedirect(reverse('audio',HomePageView))
+def separate(request):
+    if request.POST:
+        subprocess.run(['/home/glj/codes/music_separation/audio_web/media/scripts/demo_gao_s2s.sh'])
+        if (subprocess.CompletedProcess):
+            return render(request,'result.html',{})
+        else:
+            return render( request, "home.html",{})

@@ -12,11 +12,11 @@ The second button is to perform the actual separation. Ideally, this button's fu
 
 ## Project Steps
 > Maybe not in this particular order
-> - Design the user interface
-> - Add action listeners for the buttons
-> - Figure out how to connect the *webapp* to the *workstation*
+> - ~~Design the user interface~~
+> - ~~Add action listeners for the buttons~~
+> - ~~Figure out how to connect the *webapp* to the *workstation*~~ 
 > - Add additional trained models
-> - Obtain short (prefarably less than 10s *wav* files)
+> - ~~Obtain short (prefarably less than 10s *wav* files)~~
 > - Test the webapp
 > - Record demo video
 > - Prepare for the presentation
