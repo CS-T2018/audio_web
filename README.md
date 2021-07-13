@@ -17,20 +17,21 @@ The second button is to perform the actual separation. Ideally, this button's fu
 > - ~~Figure out how to connect the *webapp* to the *workstation*~~ 
 > - Add additional trained models
 > - ~~Obtain short (prefarably less than 10s *wav* files)~~
-> - Test the webapp
-> - Record demo video
-> - Prepare for the presentation
-> - Ace the presentation
+> - ~~Test the webapp~~
+> - ~~Record demo video~~
+> - ~~Prepare for the presentation~~
+> - ~~Ace the presentation~~
 > - Write the reports
 > - **GO FOR VACATION**
 
 ## Key Problems
-> - How to connect the *Django App* to the *GPU Workstation*
-> - How to open an audio file in the browser and play it
+> - ~~How to connect the *Django App* to the *GPU Workstation*~~
+> - ~~How to open an audio file in the browser and play it~~
 
 ## Languages
 > - Python
 > - HTML
-> - JavaScript
+> - CSS
+> - ~~JavaScript~~
 
 *Can use any text editor **Recommend VSCode***
