@@ -1,26 +1,28 @@
 <!doctype html>
-<html style="background-image: url('{{ song.song_file.url }}/static/images/backg6.png'); background-position:center;" class='png'>
+{% load static %}
+<html>
 <head style="border: 1px dotted gray; border-radius: 5px;">
     <title>Demo of separation tracks on music and Vocal Parts</title>
+	<link href="{% static 'css/home.css' %}" rel="stylesheet" >
 </head>
 
-<body style="align-self: center;">
-<div class="maingif2mp4" style="align-content: center;">
-
-	<h1 style="background-color:rgb(123, 136, 136); text-align: center; color: black;">Music Source Separation WebApp based on OpenUnmix</h1>
-	<a href="{% url 'about' %}" style="align-self: center; font-size: medium; font-style: italic;">About This Project</a>
+<body>
+	<div class="maingif2mp4" style="align-content: center;">
+		
+		<h1>Music Source Separation WebApp based on OpenUnmix</h1>
+		<a class="button" href="{% url 'about' %}">About This Project</a>
 	<div class="table-responsive" style="margin-top: 30px; border: 1px solid #CCCCCC; border-radius: 5px; padding-top: 10px; align-self: start;" id="latest_block">
-	<table class="table table-bordered" id="latest" style="border: 5px; border-color: black; border-style: ridge; align-self:inherit; background-color:steelblue;">
-	<thead class="thead-dark" style="align-self: center;background-color:rgb(185, 72, 44); color: black; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-	<tr>
-		<th>Name and size</th>
-		<th>Select a Model</th>
-		<th>Original audio</th>
-		<th>Operation</th>
-	</tr>
-	</thead>
-	<tbody>
-<tr><td><span title='Added: 2021-07-08 22:41:46'><strong>Mix1</strong><BR>
+		<table class="table table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th>Name and size</th>
+					<th>Select a Model</th>
+					<th>Original audio</th>
+					<th>Operation</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><td><span title='Added: 2021-07-08 22:41:46'><strong>Mix1</strong><BR>
 	File size: 2.44 MB </span></td><td><form style="font-family: monospace;"><label"></label><select><option value = "OpenUnmix 5 Stems">Open Unmix 5 Stems</option><option value = "X-UMX 2 Stems">X-UMX 2 Stems</option></select></form></td><td><audio src="{{ song.song_file.url }}/media/uploads/mixture1.wav" controls></audio></td><td><form action="{% url 'separate' %}" method="POST">
         {% csrf_token %}
         <button type="submit">Separate</button></td></tr><tr><td><span title='Added: 2021-07-08 22:23:19'><strong>Mix2</strong><BR>
@@ -28,13 +30,14 @@
         {% csrf_token %}
         <button type="submit">Separate</button></td></tr><tr><td><span title='Added: 2021-07-08 21:27:13'><strong>Mix3</strong><BR>
 	File size: 2.68 MB </span></td><td>OpenUnMix 5 Stems</td><td><audio src="{{ song.song_file.url }}/media/uploads/mixture3.wav" controls></audio></td><td><form action="{% url 'separate' %}" method="POST">
-        {% csrf_token %}
+		{% csrf_token %}
         <button type="submit">Separate</button></td></tr><tr><td><span title='Added: 2021-07-08 21:09:56'><strong>Mix4</strong><BR>
-	File size: 1.96 MB </span></td><td>OpenUnMix 5 Stems</td><td><audio src="{{ song.song_file.url }}/media/uploads/mixture4.wav" controls></audio></td><td><form action="{% url 'separate' %}" method="POST">
-        {% csrf_token %}
-        <button type="submit">Separate</button></td></tr><tr><td><span title='Added: 2021-07-08 21:09:06'><strong>Mix5</strong><BR>
-	File size: 4.84 MB </span></td><td>OpenUnMix 5 Stems</td><td><audio src="{{ song.song_file.url }}/media/uploads/mixture5.wav" controls></audio></td><td><form action="{% url 'separate' %}" method="POST">
-        {% csrf_token %}
-        <button type="submit">Separate</button></td></tr>	</tbody>
-	</table>
-	</div>
+			File size: 1.96 MB </span></td><td>OpenUnMix 5 Stems</td><td><audio src="{{ song.song_file.url }}/media/uploads/mixture4.wav" controls></audio></td><td><form action="{% url 'separate' %}" method="POST">
+				{% csrf_token %}
+				<button type="submit">Separate</button></td></tr><tr><td><span title='Added: 2021-07-08 21:09:06'><strong>Mix5</strong><BR>
+					File size: 4.84 MB </span></td><td>OpenUnMix 5 Stems</td><td><audio src="{{ song.song_file.url }}/media/uploads/mixture5.wav" controls></audio></td><td><form action="{% url 'separate' %}" method="POST">
+						{% csrf_token %}
+						<button type="submit">Separate</button></td></tr>	</tbody>
+					</table>
+				</div>
+				

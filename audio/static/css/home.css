@@ -1,0 +1,36 @@
+.button {
+    background-color: cyan;
+    border-color: lightseagreen;
+    border-radius: 0.400em;
+    border-style: solid;
+    color: black;
+    font-weight: 600;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+html {
+    background-color: black;
+}
+h1 {
+    background-color:rgb(123, 136, 136); 
+    border-radius: 0.375rem;
+    color: black;
+    text-align: center; 
+}
+table {
+    color: wheat;
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+tr {
+    flex: 0;
+    border: 0px 1px 0px 1px;
+}
+tbody {
+    flex: 1;
+}
+.thead {
+    border-bottom: 2px solid white;
+}

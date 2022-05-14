@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html style="background-image: url('{{ song.song_file.url }}/static/images/backg4.png'); background-position:center;" class='png'>
-<h1 style="border: 3px; border-style: dashed; font-style: oblique; position: inherit; text-align: center;">
-    About This Project
-</h1>
-<body style="border-radius: 2px; border-style: double ; align-items: center; text-align: center;">
-    <p style="font-style: italic;">
-    The Music Source Separation App can be used to separate a song into
-    four components: vocals, bass, drums, and others. OpenUnMix is one of
-    many music separation models that can be used on pop music to separate
-    one song into those four components.</p>
-    <p>We have provided 5 different audio files on which to test the functionality
-    of the website. The user can listen to the original file before and after
-    separation. Clicking the <strong>separate</strong> button will perform the
-    separation on the GPU workstation. The user will be redirected to a new page
-    to view the separation results when the process is complete. </p>
-    <p><strong>It must be noted that this process is slow and computationally
-        expensive and, as a result, can only be performed on short audio files.
-    </strong></p>
+{% load static %}
+<html>
+  <head>
+    <title>About This Project</title>
+    <link href="{% static 'css/about.css' %}" rel="stylesheet" />
+    <link href="{% static 'js/about.js' %}" rel="script" />
+  </head>
+  <h1>About This Project</h1>
+  <body>
+    <p class="textbox summary">
+      The Music Source Separation App can be used to separate a song into four
+      components: vocals, bass, drums, and others. OpenUnMix is one of many
+      music separation models that can be used on pop music to separate one song
+      into those four components.
+    </p>
+    <p class="textbox">
+      We have provided 5 different audio files on which to test the
+      functionality of the website. The user can listen to the original file
+      before and after separation. Clicking the <strong>separate</strong> button
+      will perform the separation on the GPU workstation. The user will be
+      redirected to a new page to view the separation results when the process
+      is complete.
+    </p>
+    <p class="textbox warning">
+      It must be noted that this process is slow and computationally expensive
+      and, as a result, can only be performed on short audio files.
+    </p>
 
-    <h4>Contributors:</h4><br>
-    <strong> Chelsea Asaribamah Nam-Katoti 5111800508</strong><br>
-    <strong> Esther Manda Ngolwe 5111910501 </strong><br>
-    <strong> Tawanda Eddie Junior Munongo 5111800504 </strong><br>
+    <h4 class="heading4">Contributors:</h4>
+    <br />
+    <strong> Chelsea Asaribamah Nam-Katoti 5111800508</strong><br />
+    <strong> Esther Manda Ngolwe 5111910501 </strong><br />
+    <strong> Tawanda Eddie Junior Munongo 5111800504 </strong><br />
 
-    <br><a href="{% url 'home' %}" style="align-self: center; text-align: center; border-style: groove; background-color: white;">Proceed To Check</a>
-
-</body>
+    <br /><a class="button" href="{% url 'home' %}">Proceed</a>
+  </body>
 </html>
